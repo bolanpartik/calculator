@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    user-select: none;
+    flex-direction: column;
+    background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #3e61d2 40px
+    ),
+    repeating-linear-gradient(#4767d055, #4767d0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em yellow, 0 0 0.2em green;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5%;
+    width: 22%;
+    height: 60%;
+    border: 1px solid red;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px black;
+    position: relative;
+}
+
+.input {
+    display: grid;
+    place-items: center end;
+    grid-column: span 4;
+    text-align: end;
+    padding-right: .3em;
+    border: 1px solid black;
+    font-size: 1.5em;
+    color: rgb(180, 210, 79);
+    border-radius: 10px;
+    text-shadow: 1px 1px 2px rgb(255, 0, 183), 0 0 1em rgb(185, 185, 14), 0 0 0.2em rgb(45, 216, 45);
+    background: linear-gradient(to right, #ba8b02, #181818);
+}
+
+.buttons {
+    border: 1px solid black;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 2px inset black;
+    color: aliceblue;
+    background-color: #794e5b;
+}
+
+.operations {
+    background-color: #ce3a11;
+
+}
+
+.buttons:hover {
+    transform: scale(1.05);
+    color: #000;
+    background-color: rgb(215, 184, 157);
+    box-shadow: 1px 1px black;
+}
+
+.contact-container {
+    position: absolute;
+    top: 79%;
+    left: 62%;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding-right: .3em;
+    background: linear-gradient(to right, #c33764, #1d2671);
+    max-width:fit-content;
+}
+
+.contact-heading {
+    color: aqua;
+    margin-left: 5px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact {
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    transform: rotate(120deg);
+}
+
+.links-container {
+    position: absolute;
+    bottom: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.links img {
+    height: 35px;
+}
+
+.links {
+    transition: all 0.5s ease;
+}
+
+.links:hover {
+    transform: scale(.9);
+    filter: drop-shadow(1px 1px 2px black);
+}
+
+.contact-container:hover {
+    background: transparent;
+}
+
+.contact-container:hover .contact {
+    transform: rotate(30deg);
+}
+
+.contact-container:hover .contact-heading {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.contact-container:hover .links-container {
+    visibility: visible;
+    opacity: 1;
+}
