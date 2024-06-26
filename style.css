@@ -153,3 +153,62 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
+@media only screen and (max-width:1150px) {
+    .calculator-container{
+        width: 30%;
+    }
+    .contact-container{
+        left: 66%;
+    }
+    
+}
+@media only screen and (max-width:900px){
+    .calculator-container{
+        width: 40%;
+    }
+    .contact-container{
+        left: 71%;
+    }
+    
+}
+
+@media only screen and (max-width:600px){
+    .contact-container{
+        width: 70%;
+    }
+    .contact-container{
+        left: 72%;
+        top: 80%;
+    }
+    .contact-heading{
+        display: none;
+    }
+}
+@media only screen and (max-width:475px){
+    body{
+        justify-content: start;
+        align-items: normal;
+        margin-left: 5%;
+    }
+    .calculator-container{
+        width: 80%;  
+    }
+    .contact-container{
+        top: 88%;
+        left: 10%;
+    }
+    .links-container{
+        bottom: 0;
+        left: 100%;
+        flex-direction: row;
+        margin-left: 15%;
+        gap: 10%;
+    }
+    .heading{
+        text-align: start;
+        margin-left: 15%;
+        margin-top: 5%;
+    }
+    
+}
